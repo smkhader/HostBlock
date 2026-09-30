@@ -28,7 +28,7 @@ Removes duplicates, strips protocols, paths, query strings, and malformed entrie
 System‑wide blocking  
 All browsers and applications inherit the block rules automatically.
 
-🔧 Usage
+Usage
 1. Block domains from pasted HTML
 powershell
 .\HostBlock.ps1
@@ -36,10 +36,9 @@ Paste HTML when prompted. HostBlock extracts domains and writes them to the host
 
 2. Block domains from a URL
 powershell
-.\HostBlock.ps1 -Url https://www.speedtest.net
-HostBlock downloads the page, extracts all domains, and blocks them.
+.\HostBlock.ps1 -Url https://www.domain.net
 
-3. Write extracted domains to a custom file
+3. Write extracted domains to a custom file (This does not require Administrator access)
 powershell
 .\HostBlock.ps1 -AltHostFile .\ads.txt
 This writes all extracted domains to ads.txt instead of modifying the system hosts file.
@@ -49,12 +48,6 @@ powershell
 .\HostBlock.ps1 -Url https://www.craigslist.org -AltHostFile .\craigslist-block.txt
 This fetches Craigslist, extracts domains, and writes them to craigslist-block.txt.
 
-Example Output
-Code
-0.0.0.0 images.domain.org
-0.0.0.0 www.domain.net
-0.0.0.0 static.domain.com
-
 Use Cases
 - Block ads and trackers
 - Remove telemetry endpoints
@@ -62,7 +55,5 @@ Use Cases
 - Prevent external CDN/script calls
 - Harden systems for privacy or security
 - Build custom blocklists from real webpages
-
-Administrator privileges (for system hosts file)
 
 PowerShell 5+ or PowerShell Core
