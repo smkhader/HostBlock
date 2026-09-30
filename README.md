@@ -16,9 +16,6 @@ Use -Url to fetch a webpage, parse its HTML, and block all domains referenced wi
 Hosts‑file blocking  
 Writes entries in the standard format:
 
-Code
-0.0.0.0 domain.com
-0.0.0.0 sub.domain.com
 Alternate output file support  
 Use -AltHostFile to write extracted domains to a custom file instead of modifying the system hosts file.
 
